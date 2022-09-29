@@ -205,7 +205,7 @@ User@localhost:/etc/apt/sources.list.d$ sudo nano repo-cpe.list
 deb file:/home/User/repo-cpe cosmic universe
 ```
 7- J'execute un "sudo apt update" pour m'assurer qu'il n'y ait pas d'erreur 
-`````
+```
 User@localhost:/etc/apt/sources.list.d$ sudo apt update
 Get:1 file:/home/User/repo-cpe cosmic InRelease
 Ign:1 file:/home/User/repo-cpe cosmic InRelease
@@ -219,4 +219,20 @@ Hit:6 http://us.archive.ubuntu.com/ubuntu jammy-updates InRelease
 Hit:7 http://us.archive.ubuntu.com/ubuntu jammy-backports InRelease
 Hit:8 http://us.archive.ubuntu.com/ubuntu jammy-security InRelease
 Reading package lists... Done
-````
+``` 
+
+## _Signature du dépôt avec GPG_ 
+1-   
+2- 
+```
+User@localhost:~/repo-cpe/conf$ sudo nano distributions
+Origin: Un nom, une URL, ou tout texte expliquant la provenance du dépôt
+Label: CPE repo
+Suite: stable
+Codename: cosmic
+Architectures: i386 amd64
+Components: universe
+Description: Une description du dépôt
+SignWith: yes
+```
+3- 
