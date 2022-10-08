@@ -222,8 +222,9 @@ Reading package lists... Done
 ``` 
 
 ## _Signature du dépôt avec GPG_ 
-1-   
-2- 
+1- Création de ma paire de clés.
+
+2-   
 ```
 User@localhost:~/repo-cpe/conf$ sudo nano distributions
 Origin: Un nom, une URL, ou tout texte expliquant la provenance du dépôt
@@ -235,4 +236,16 @@ Components: universe
 Description: Une description du dépôt
 SignWith: yes
 ```
-3- 
+3- J'ajoute ma clé de dépot.
+```
+reprepro --ask-passphrase -b . export
+```
+4- J'ajoute ma clé publique à votre dépôt avec la commande :
+```
+gpg --export -a "anton" > public.key
+```
+
+5- Pour ajouter cette clé à la liste des clés fiables connues de apt : 
+```
+sudo apt-key add public.key
+```
